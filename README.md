@@ -1,6 +1,12 @@
 # Apex Inventory & POS Management System
 
-A modern, production-grade **Inventory & Point of Sale (POS) Management System** built with **Node.js**, **Express**, **SQLite** (`node:sqlite`), and a responsive web dashboard designed for retail, wholesale, and multi-category stock operations.
+[![Node.js](https://img.shields.io/badge/Node.js-v22%2B%20%7C%20v24-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-5.x-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-Built--in%20node%3Asqlite-003B57?logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Tests: 5 Passed](https://img.shields.io/badge/Tests-5%2F5%20Passed-success.svg)](#-mandatory-verification-tests-executed)
+
+> **Apex Inventory & POS Management System** — A modern, responsive inventory and point-of-sale solution for managing products, stock, sales, purchases, suppliers, customers, invoices, payments, and business reports. Built to streamline retail operations with real-time inventory tracking and efficient sales management.
 
 ---
 
