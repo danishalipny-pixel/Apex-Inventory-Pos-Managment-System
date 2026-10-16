@@ -1,0 +1,9 @@
+node_modules/
+data/*test*.db*
+data/*.db-wal
+data/*.db-shm
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

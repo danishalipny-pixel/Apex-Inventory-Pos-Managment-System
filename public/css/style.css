@@ -1,0 +1,242 @@
+/* Modern Inventory & POS Management System Styles */
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-color: #64748b;
+  --dark-sidebar: #0f172a;
+  --dark-sidebar-hover: #1e293b;
+  --border-color: #e2e8f0;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 260px;
+  min-width: 260px;
+  background-color: var(--dark-sidebar) !important;
+  transition: all 0.25s ease;
+  z-index: 1040;
+}
+
+#sidebar .nav-link {
+  color: #94a3b8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+#sidebar .nav-link:hover {
+  color: #ffffff;
+  background-color: var(--dark-sidebar-hover);
+}
+
+#sidebar .nav-link.active {
+  color: #ffffff;
+  background-color: var(--primary-color);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.w-20 {
+  width: 20px;
+  text-align: center;
+}
+
+.fs-xs {
+  font-size: 0.75rem;
+}
+
+.fs-sm {
+  font-size: 0.85rem;
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Status Indicator */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+
+/* KPI Cards */
+.kpi-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* POS Terminal */
+.pos-product-card {
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.18s ease;
+  user-select: none;
+  background: #ffffff;
+}
+
+.pos-product-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.12);
+}
+
+.pos-product-card.out-of-stock {
+  opacity: 0.6;
+  filter: grayscale(0.6);
+  cursor: not-allowed;
+}
+
+.pos-product-card .product-badge {
+  font-size: 0.7rem;
+}
+
+.pos-cart-card {
+  min-height: 580px;
+}
+
+/* Category Pills */
+#posCategoryPills .btn {
+  white-space: nowrap;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+}
+
+/* Monospace text for financial values and codes */
+.font-monospace {
+  font-family: var(--font-mono) !important;
+}
+
+/* Table styling */
+.table th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #64748b;
+}
+
+/* Mobile Sidebar Toggle */
+@media (max-width: 767.98px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -260px;
+  }
+
+  #sidebar.show {
+    left: 0;
+  }
+}
+
+/* Printable Receipt Styles */
+.receipt-paper {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 1px dashed #444;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.receipt-header h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.receipt-meta {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.receipt-table th {
+  border-bottom: 1px dashed #444;
+  padding: 4px 0;
+  font-size: 11px;
+}
+
+.receipt-table td {
+  padding: 4px 0;
+}
+
+.receipt-summary {
+  border-top: 1px dashed #444;
+  padding-top: 8px;
+  margin-bottom: 12px;
+}
+
+.receipt-footer {
+  text-align: center;
+  border-top: 1px dashed #444;
+  padding-top: 10px;
+  font-size: 11px;
+}
+
+.barcode-strip {
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Print Media Query */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printableReceipt, #printableReceipt * {
+    visibility: visible;
+  }
+
+  #printableReceipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .modal-backdrop, .modal-header, .modal-footer, #sidebar, header {
+    display: none !important;
+  }
+}

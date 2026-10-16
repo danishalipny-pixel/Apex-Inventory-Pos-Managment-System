@@ -1,0 +1,22 @@
+{
+  "name": "inventory-pos-system",
+  "version": "1.0.0",
+  "description": "Production-ready Inventory & POS Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "keywords": [
+    "inventory",
+    "pos",
+    "retail",
+    "stock-management"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}
